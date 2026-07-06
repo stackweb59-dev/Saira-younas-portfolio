@@ -77,6 +77,385 @@
         .reveal { opacity: 1; transform: none; }
         html { scroll-behavior: auto; }
       }
+      /* ===========================
+   CONTACT SECTION
+=========================== */
+
+#contact{
+    background:#111111;
+    position:relative;
+    overflow:hidden;
+}
+
+#contact::before{
+    content:"";
+    position:absolute;
+    width:550px;
+    height:550px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(140,0,0,.18) 0%,
+    rgba(140,0,0,.05) 45%,
+    transparent 75%);
+    top:-180px;
+    right:-180px;
+    filter:blur(40px);
+    pointer-events:none;
+}
+
+#contact::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(120,0,0,.15),
+    transparent 70%);
+    left:-150px;
+    bottom:-180px;
+    filter:blur(50px);
+    pointer-events:none;
+}
+
+
+/* ===========================
+   LEFT & RIGHT CARDS
+=========================== */
+
+.contact-card{
+    background:#181818;
+    border:1px solid rgba(160,25,25,.28);
+    border-radius:28px;
+    transition:.45s;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-card:hover{
+
+    border-color:#991b1b;
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 0 35px rgba(185,28,28,.28);
+
+}
+
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    135deg,
+    transparent,
+    rgba(255,255,255,.04),
+    transparent);
+
+    transform:translateX(-120%);
+
+    transition:.7s;
+
+}
+
+.contact-card:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+
+/* ===========================
+   ICON BOX
+=========================== */
+
+.icon-box{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(135deg,#991b1b,#450a0a);
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+.contact-card:hover .icon-box{
+
+    transform:rotate(8deg) scale(1.08);
+
+}
+
+
+/* ===========================
+   INPUTS
+=========================== */
+
+input,
+textarea,
+select{
+
+    transition:.35s;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    background:#141414;
+
+    border-color:#b91c1c;
+
+    box-shadow:
+    0 0 0 1px rgba(185,28,28,.25),
+    0 0 25px rgba(185,28,28,.22);
+
+}
+
+
+/* ===========================
+   PLACEHOLDER
+=========================== */
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#777;
+
+}
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.contact-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.contact-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.18);
+
+    transform:skewX(-25deg);
+
+    transition:.7s;
+
+}
+
+.contact-btn:hover::before{
+
+    left:150%;
+
+}
+
+.contact-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 0 35px rgba(185,28,28,.45);
+
+}
+
+
+/* ===========================
+   SOCIAL ICONS
+=========================== */
+
+.social-btn{
+
+    transition:.35s;
+
+}
+
+.social-btn:hover{
+
+    background:#991b1b;
+
+    color:#fff;
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 0 25px rgba(185,28,28,.4);
+
+}
+
+
+/* ===========================
+   WHATSAPP CARD
+=========================== */
+
+.whatsapp-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.whatsapp-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(185,28,28,.25),
+
+    transparent 70%);
+
+    top:-60px;
+
+    right:-60px;
+
+    border-radius:50%;
+
+}
+
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#6d1414;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#991b1b;
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1024px){
+
+#contact .grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#contact{
+
+padding:80px 0;
+
+}
+
+.contact-card{
+
+padding:22px;
+
+}
+
+.whatsapp-card{
+
+padding:35px 25px;
+
+}
+
+input,
+select{
+
+height:56px;
+
+}
+
+textarea{
+
+min-height:150px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.contact-card{
+
+border-radius:22px;
+
+}
+
+.icon-box{
+
+width:55px;
+
+height:55px;
+
+font-size:22px;
+
+}
+
+}
     </style>
   </head>
 
@@ -540,241 +919,275 @@
     <div class="ekg-slot"></div>
 
     <!-- ============ CONTACT ============ -->
-    <section id="contact" class="bg-bg2 border-t border-line py-[100px]">
-      <div class="max-w-[1150px] mx-auto px-6">
-        <div class="text-center">
-          <span class="reveal inline-flex justify-center items-center gap-2.5 text-xs font-semibold tracking-[0.24em] uppercase text-redsoft mb-3.5 before:content-[''] before:w-[26px] before:h-[2px] before:bg-red">Get In Touch</span>
-          <h2 class="reveal font-sora text-[clamp(1.9rem,4vw,2.7rem)] font-bold mb-3">Get Ready To <span class="text-redsoft">Create Great</span></h2>
-          <p class="reveal text-neutral-400 max-w-[600px] mx-auto text-[0.98rem]">
-            Open to project management roles, collaborations, and conversations
-            about healthcare-meets-tech.
-          </p>
-        </div>
+    <section id="contact" class="relative py-24 bg-[#111111] overflow-hidden">
 
-        <div class="grid md:grid-cols-2 gap-14 mt-12 items-start">
-          <div class="reveal grid gap-4">
-            <a class="flex gap-4 items-center bg-card border border-line rounded-2xl px-[22px] py-5 hover:border-red/50 hover:translate-x-1.5 transition-all" href="mailto:doctorsairayounas@gmail.com">
-              <div class="w-[46px] h-[46px] rounded-xl shrink-0 flex items-center justify-center bg-red/15 text-redsoft">✉</div>
-              <div>
-                <div class="text-[0.72rem] tracking-[0.16em] uppercase text-neutral-400">Email</div>
-                <div class="text-[0.94rem] font-medium">doctorsairayounas@gmail.com</div>
-              </div>
-            </a>
-            <a class="flex gap-4 items-center bg-card border border-line rounded-2xl px-[22px] py-5 hover:border-red/50 hover:translate-x-1.5 transition-all" href="tel:+923700702801">
-              <div class="w-[46px] h-[46px] rounded-xl shrink-0 flex items-center justify-center bg-red/15 text-redsoft">✆</div>
-              <div>
-                <div class="text-[0.72rem] tracking-[0.16em] uppercase text-neutral-400">Phone</div>
-                <div class="text-[0.94rem] font-medium">+92 370 0702801</div>
-              </div>
-            </a>
-            <div class="flex gap-4 items-center bg-card border border-line rounded-2xl px-[22px] py-5">
-              <div class="w-[46px] h-[46px] rounded-xl shrink-0 flex items-center justify-center bg-red/15 text-redsoft">⚲</div>
-              <div>
-                <div class="text-[0.72rem] tracking-[0.16em] uppercase text-neutral-400">Location</div>
-                <div class="text-[0.94rem] font-medium">Shaheenabad, Gujranwala, Pakistan</div>
-              </div>
-              
-             
-            </div>
-          </div>
-          <!-- WhatsApp CTA -->
-<div class="reveal mt-10">
+<div class="max-w-7xl mx-auto px-6">
 
-  <div class="relative overflow-hidden rounded-[32px] border border-[#4b1d1d] bg-[#181818] px-6 py-14 md:px-12 md:py-20">
+<div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
 
-    <!-- Glow -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(127,29,29,0.15),transparent_70%)]"></div>
+<!-- ================= LEFT SIDE ================= -->
 
-    <div class="relative z-10 text-center">
+<div class="space-y-6">
 
-      <h3 class="font-sora text-4xl md:text-5xl font-bold text-white mb-5">
-        Prefer WhatsApp?
-      </h3>
+<!-- EMAIL -->
 
-      <p class="font-inter text-lg md:text-xl text-gray-400 mb-10">
-        Message us directly for the fastest reply.
-      </p>
+<div class="group flex items-center gap-5 rounded-3xl border border-[#3b1a1a] bg-[#181818] p-6 transition duration-500 hover:border-red-700 hover:shadow-[0_0_30px_rgba(127,29,29,.35)]">
 
-      <a
-        href="https://wa.me/923001234567"
-        target="_blank"
-        class="group inline-flex items-center gap-4 rounded-full px-10 py-5 font-sora font-semibold text-lg text-white bg-gradient-to-r from-[#7f1d1d] via-[#991b1b] to-[#450a0a] transition-all duration-500 hover:scale-105 hover:shadow-[0_0_35px_rgba(185,28,28,.55)]"
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#991b1b] to-[#450a0a] flex items-center justify-center text-3xl">
+📧
+</div>
+
+<div>
+
+<p class="font-sora uppercase tracking-[3px] text-xs text-gray-500">
+Email
+</p>
+
+<h3 class="font-inter text-white text-xl font-semibold mt-1">
+yourmail@gmail.com
+</h3>
+
+</div>
+
+</div>
+
+<!-- PHONE -->
+
+<div class="group flex items-center gap-5 rounded-3xl border border-[#3b1a1a] bg-[#181818] p-6 transition duration-500 hover:border-red-700 hover:shadow-[0_0_30px_rgba(127,29,29,.35)]">
+
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#991b1b] to-[#450a0a] flex items-center justify-center text-3xl">
+📞
+</div>
+
+<div>
+
+<p class="font-sora uppercase tracking-[3px] text-xs text-gray-500">
+Phone
+</p>
+
+<h3 class="font-inter text-white text-xl font-semibold mt-1">
++92 300 1234567
+</h3>
+
+</div>
+
+</div>
+
+<!-- LOCATION -->
+
+<div class="group flex items-center gap-5 rounded-3xl border border-[#3b1a1a] bg-[#181818] p-6 transition duration-500 hover:border-red-700 hover:shadow-[0_0_30px_rgba(127,29,29,.35)]">
+
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#991b1b] to-[#450a0a] flex items-center justify-center text-3xl">
+📍
+</div>
+
+<div>
+
+<p class="font-sora uppercase tracking-[3px] text-xs text-gray-500">
+Location
+</p>
+
+<h3 class="font-inter text-white text-xl font-semibold mt-1">
+Gujranwala, Pakistan
+</h3>
+
+</div>
+
+</div>
+
+<!-- WHATSAPP CARD -->
+
+<div class="rounded-[30px] border border-[#3b1a1a] bg-[#181818] px-8 py-12 text-center shadow-[0_0_40px_rgba(127,29,29,.15)]">
+
+<h2 class="font-sora text-5xl font-bold text-white mb-4">
+
+Prefer WhatsApp?
+
+</h2>
+
+<p class="font-inter text-gray-400 text-lg mb-10">
+
+Message directly for instant reply.
+
+</p>
+
+<a href="#"
+
+class="inline-flex items-center gap-3 rounded-full px-10 py-5 bg-gradient-to-r from-[#991b1b] via-[#7f1d1d] to-[#450a0a] font-sora text-lg font-semibold text-white transition hover:scale-105 hover:shadow-[0_0_35px_rgba(185,28,28,.45)]">
+
+💬 Chat on WhatsApp
+
+</a>
+
+</div>
+
+<!-- SOCIAL -->
+
+<div class="flex gap-4">
+
+<a href="#" class="w-16 h-16 rounded-2xl border border-[#3b1a1a] bg-[#181818] flex items-center justify-center text-white text-2xl hover:bg-[#991b1b] transition">
+
+in
+
+</a>
+
+<a href="#" class="w-16 h-16 rounded-2xl border border-[#3b1a1a] bg-[#181818] flex items-center justify-center text-white text-2xl hover:bg-[#991b1b] transition">
+
+f
+
+</a>
+
+<a href="#" class="w-16 h-16 rounded-2xl border border-[#3b1a1a] bg-[#181818] flex items-center justify-center text-white text-2xl hover:bg-[#991b1b] transition">
+
+◎
+
+</a>
+
+<a href="#" class="w-16 h-16 rounded-2xl border border-[#3b1a1a] bg-[#181818] flex items-center justify-center text-white text-2xl hover:bg-[#991b1b] transition">
+
+⌘
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ================= RIGHT SIDE ================= -->
+
+<div class="rounded-[32px] border border-[#3b1a1a] bg-[#181818] p-10 shadow-[0_0_40px_rgba(127,29,29,.18)]">
+
+<!-- YAHAN FORM AYEGA -->
+<form class="space-y-6">
+
+  <!-- Row 1 -->
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div>
+      <label class="block mb-3 font-sora uppercase tracking-[3px] text-xs text-gray-400">
+        Name
+      </label>
+
+      <input
+        type="text"
+        placeholder="Your Name"
+        class="w-full h-16 rounded-2xl bg-[#101010] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 outline-none transition-all duration-300 focus:border-red-700 focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+      />
+    </div>
+
+    <div>
+      <label class="block mb-3 font-sora uppercase tracking-[3px] text-xs text-gray-400">
+        Email
+      </label>
+
+      <input
+        type="email"
+        placeholder="you@example.com"
+        class="w-full h-16 rounded-2xl bg-[#101010] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 outline-none transition-all duration-300 focus:border-red-700 focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+      />
+    </div>
+
+  </div>
+
+  <!-- WhatsApp -->
+
+  <div>
+
+    <label class="block mb-3 font-sora uppercase tracking-[3px] text-xs text-gray-400">
+      WhatsApp Number
+    </label>
+
+    <input
+      type="text"
+      placeholder="+92 300 1234567"
+      class="w-full h-16 rounded-2xl bg-[#101010] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 outline-none transition-all duration-300 focus:border-red-700 focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+    />
+
+  </div>
+
+  <!-- Row 2 -->
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div>
+
+      <label class="block mb-3 font-sora uppercase tracking-[3px] text-xs text-gray-400">
+        Service Needed
+      </label>
+
+      <select
+        class="w-full h-16 rounded-2xl bg-[#101010] border border-[#3b1a1a] px-6 text-gray-300 outline-none transition-all duration-300 focus:border-red-700 focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
       >
+        <option>Select a Service</option>
+        <option>Web Development</option>
+        <option>Frontend Development</option>
+        <option>UI / UX Design</option>
+        <option>Portfolio Website</option>
+        <option>AI Automation</option>
+      </select>
 
-        <!-- WhatsApp Icon -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-8 h-8"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .1 5.36.1 11.96c0 2.1.55 4.15 1.59 5.96L0 24l6.25-1.64a11.92 11.92 0 0 0 5.81 1.49h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.19-1.24-6.18-3.51-8.41ZM12.07 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.83 9.83 0 1 1 8.31 4.6Zm5.39-7.34c-.29-.14-1.71-.84-1.98-.94-.26-.1-.46-.14-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.08-.29-.14-1.22-.45-2.32-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.5.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.65-1.57-.89-2.15-.23-.55-.47-.48-.65-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.99 2.43 0 1.43 1.03 2.81 1.17 3 .14.19 2.03 3.11 4.92 4.36.69.3 1.22.48 1.64.61.69.22 1.32.19 1.81.12.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.25.17-1.37-.07-.12-.26-.19-.55-.33Z"/>
-        </svg>
+    </div>
 
-        Chat on WhatsApp
+    <div>
 
-        <span class="transition-transform duration-300 group-hover:translate-x-2">
-          →
-        </span>
+      <label class="block mb-3 font-sora uppercase tracking-[3px] text-xs text-gray-400">
+        Project Budget
+      </label>
 
-      </a>
+      <select
+        class="w-full h-16 rounded-2xl bg-[#101010] border border-[#3b1a1a] px-6 text-gray-300 outline-none transition-all duration-300 focus:border-red-700 focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+      >
+        <option>Select a Range</option>
+        <option>$100 - $500</option>
+        <option>$500 - $1000</option>
+        <option>$1000 - $3000</option>
+        <option>$3000+</option>
+      </select>
 
     </div>
 
   </div>
 
+  <!-- Message -->
+
+  <div>
+
+    <label class="block mb-3 font-sora uppercase tracking-[3px] text-xs text-gray-400">
+      Message
+    </label>
+
+    <textarea
+      rows="7"
+      placeholder="Tell me about your project..."
+      class="w-full rounded-2xl bg-[#101010] border border-[#3b1a1a] px-6 py-5 text-white placeholder:text-gray-500 resize-none outline-none transition-all duration-300 focus:border-red-700 focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+    ></textarea>
+
+  </div>
+
+  <!-- Button -->
+
+  <button
+    type="button"
+    onclick="sendMail()"
+    class="group w-full h-16 rounded-2xl bg-gradient-to-r from-[#991b1b] via-[#7f1d1d] to-[#450a0a] text-white font-sora text-lg font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(185,28,28,.45)]"
+  >
+
+    Send Message
+
+    <span class="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-2">
+      →
+    </span>
+
+  </button>
+
+</form>
 </div>
 
-          <div class="reveal d1">
-
-  <form class="space-y-6 rounded-[28px] border border-red/25 bg-[#181818] p-8 md:p-10 shadow-[0_0_40px_rgba(120,0,0,.15)]">
-
-    <!-- Row 1 -->
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <div>
-        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
-          Your Name
-        </label>
-
-        <input
-          type="text"
-          placeholder="Your Name"
-          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
-        >
-      </div>
-
-      <div>
-        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
-          Phone Number
-        </label>
-
-        <input
-          type="text"
-          placeholder="+92 300 1234567"
-          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
-        >
-      </div>
-
-    </div>
-
-
-
-    <!-- Row 2 -->
-
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <div>
-        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
-          Email
-        </label>
-
-        <input
-          type="email"
-          placeholder="you@example.com"
-          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
-        >
-      </div>
-
-      <div>
-        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
-          Subject
-        </label>
-
-        <input
-          type="text"
-          placeholder="Subject"
-          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
-        >
-      </div>
-
-    </div>
-
-
-
-    <!-- Row 3 -->
-
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <div>
-
-        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
-          Service Needed
-        </label>
-
-        <select
-          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-gray-300 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
-        >
-          <option>Select a Service</option>
-          <option>Web Development</option>
-          <option>UI/UX Design</option>
-          <option>AI Solutions</option>
-          <option>Portfolio Website</option>
-        </select>
-
-      </div>
-
-
-
-      <div>
-
-        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
-          Project Budget
-        </label>
-
-        <select
-          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-gray-300 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
-        >
-          <option>Select a Range</option>
-          <option>$100 - $500</option>
-          <option>$500 - $1000</option>
-          <option>$1000 - $3000</option>
-          <option>$3000+</option>
-        </select>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- Message -->
-
-    <div>
-
-      <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
-        Message
-      </label>
-
-      <textarea
-        rows="6"
-        placeholder="Tell me about your project..."
-        class="w-full rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 py-5 text-white placeholder:text-gray-500 font-inter outline-none resize-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
-      ></textarea>
-
-    </div>
-
-
-
-    <!-- Button -->
-
-    <button
-      onclick="sendMail()"
-      type="button"
-      class="group w-full h-[68px] rounded-2xl bg-gradient-to-r from-[#7f1d1d] via-[#991b1b] to-[#450a0a] text-white font-sora text-lg font-semibold transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(185,28,28,.55)]"
-    >
-      Appointment Now
-      <span class="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-2">
-        →
-      </span>
-    </button>
-
-  </form>
+</div>
 
 </div>
-        </div>
-      </div>
-    </section>
+
+</section>
 
     <!-- ============ FOOTER ============ -->
     <footer class="border-t border-line py-[50px] pb-9">
