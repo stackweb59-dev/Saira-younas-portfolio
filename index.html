@@ -77,348 +77,6 @@
         .reveal { opacity: 1; transform: none; }
         html { scroll-behavior: auto; }
       }
-      /*==================================================
-        CONTACT SECTION - PREMIUM MAROON THEME
-==================================================*/
-
-:root{
-
-    --maroon:#7b1122;
-    --maroon-dark:#5d0d1a;
-    --maroon-light:#c81d3d;
-
-    --card:#ececec;
-    --input:#f8f8f8;
-
-    --text:#222;
-    --muted:#666;
-
-}
-
-/*=========================================
-            CONTACT CARD
-==========================================*/
-
-.contact-card{
-
-    position:relative;
-    overflow:hidden;
-
-    background:var(--card);
-
-    border:2px solid var(--maroon);
-
-    transition:.45s ease;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-}
-
-.contact-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:var(--maroon-light);
-
-    box-shadow:
-    0 0 15px rgba(200,29,61,.30),
-    0 0 35px rgba(200,29,61,.20),
-    0 0 70px rgba(200,29,61,.15);
-
-}
-
-/* Lightning Sweep */
-
-.contact-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:-2px;
-
-    background:linear-gradient(
-    120deg,
-    transparent 10%,
-    rgba(255,255,255,.9),
-    rgba(200,29,61,.9),
-    rgba(255,255,255,.9),
-    transparent 90%);
-
-    transform:translateX(-150%);
-
-    transition:.8s;
-
-}
-
-.contact-card:hover::before{
-
-    transform:translateX(150%);
-
-}
-
-/*=========================================
-            ICON
-==========================================*/
-
-.contact-icon{
-
-    width:58px;
-    height:58px;
-
-    border-radius:16px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    color:white;
-
-    background:linear-gradient(
-    135deg,
-    var(--maroon),
-    var(--maroon-light));
-
-    transition:.4s;
-
-    flex-shrink:0;
-
-}
-
-.contact-card:hover .contact-icon{
-
-    transform:rotate(-8deg) scale(1.08);
-
-    box-shadow:
-    0 0 20px rgba(200,29,61,.55);
-
-}
-
-/*=========================================
-            FORM
-==========================================*/
-
-.contact-form{
-
-    background:var(--card);
-
-    border:2px solid var(--maroon);
-
-    transition:.4s;
-
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
-
-}
-
-.contact-form:hover{
-
-    border-color:var(--maroon-light);
-
-    box-shadow:
-    0 0 18px rgba(200,29,61,.30),
-    0 0 40px rgba(200,29,61,.20);
-
-}
-
-/*=========================================
-            INPUTS
-==========================================*/
-
-.contact-input{
-
-    background:var(--input);
-
-    border:2px solid var(--maroon);
-
-    color:var(--text);
-
-    outline:none;
-
-    transition:.35s;
-
-}
-
-.contact-input::placeholder{
-
-    color:#888;
-
-}
-
-.contact-input:focus{
-
-    border-color:var(--maroon-light);
-
-    box-shadow:
-    0 0 8px rgba(200,29,61,.35),
-    0 0 20px rgba(200,29,61,.18);
-
-}
-
-/*=========================================
-            BUTTON
-==========================================*/
-
-.contact-btn{
-
-    position:relative;
-
-    overflow:hidden;
-
-    color:#fff;
-
-    background:linear-gradient(
-    135deg,
-    var(--maroon),
-    var(--maroon-light));
-
-    transition:.35s;
-
-}
-
-.contact-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-    0 0 15px rgba(200,29,61,.45),
-    0 0 35px rgba(200,29,61,.25);
-
-}
-
-/* Shine Effect */
-
-.contact-btn::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:-120%;
-
-    top:0;
-
-    width:60%;
-
-    height:100%;
-
-    background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,.8),
-    transparent);
-
-    transition:.7s;
-
-}
-
-.contact-btn:hover::before{
-
-    left:150%;
-
-}
-
-/*=========================================
-            SOCIAL ICONS
-==========================================*/
-
-.social-icon{
-
-    width:52px;
-    height:52px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    border-radius:14px;
-
-    background:var(--card);
-
-    border:2px solid var(--maroon);
-
-    color:var(--maroon);
-
-    transition:.35s;
-
-    font-size:20px;
-
-}
-
-.social-icon:hover{
-
-    transform:translateY(-6px);
-
-    background:var(--maroon);
-
-    color:#fff;
-
-    border-color:var(--maroon-light);
-
-    box-shadow:
-    0 0 15px rgba(200,29,61,.45),
-    0 0 35px rgba(200,29,61,.25);
-
-}
-
-/*=========================================
-            TEXT
-==========================================*/
-
-.contact-card h3,
-.contact-form h2{
-
-    color:#1f1f1f;
-
-}
-
-.contact-card p,
-.contact-form p{
-
-    color:#666;
-
-}
-
-/*=========================================
-            ACTIVE CLICK EFFECT
-==========================================*/
-
-.contact-card:active,
-.contact-btn:active,
-.social-icon:active{
-
-    transform:scale(.97);
-
-    box-shadow:
-    0 0 15px rgba(200,29,61,.5),
-    0 0 45px rgba(200,29,61,.35);
-
-}
-
-/*=========================================
-            RESPONSIVE
-==========================================*/
-
-@media (max-width:768px){
-
-.contact-form{
-
-padding:28px;
-
-}
-
-.contact-card{
-
-padding:20px;
-
-}
-
-.contact-btn{
-
-padding:16px;
-
-}
-
-}
     </style>
   </head>
 
@@ -635,22 +293,22 @@ padding:16px;
 
             <div class="group relative overflow-hidden bg-card border border-line rounded-2xl px-[26px] py-6 mb-4 hover:border-red/45 hover:-translate-y-1 transition-all">
               <span class="absolute left-0 top-0 bottom-0 w-[3px] bg-red scale-y-0 origin-top group-hover:scale-y-100 transition-transform"></span>
-              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2023 — 2026</div>
-              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Receptionist & WMO Assistant</h4>
+              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2022 — 2025</div>
+              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Assistant of WMO Gynaecologist</h4>
               <div class="text-[0.85rem] text-neutral-400">Misal Healthcare & Maternity Home — Medical</div>
             </div>
 
             <div class="group relative overflow-hidden bg-card border border-line rounded-2xl px-[26px] py-6 mb-4 hover:border-red/45 hover:-translate-y-1 transition-all">
               <span class="absolute left-0 top-0 bottom-0 w-[3px] bg-red scale-y-0 origin-top group-hover:scale-y-100 transition-transform"></span>
-              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2022 — 2023</div>
-              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Receptionist</h4>
+              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2025 — 2026</div>
+              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Social Media Marketing Manager</h4>
               <div class="text-[0.85rem] text-neutral-400">Al-Saeed Hospital — Medical</div>
             </div>
 
             <div class="group relative overflow-hidden bg-card border border-line rounded-2xl px-[26px] py-6 hover:border-red/45 hover:-translate-y-1 transition-all">
               <span class="absolute left-0 top-0 bottom-0 w-[3px] bg-red scale-y-0 origin-top group-hover:scale-y-100 transition-transform"></span>
-              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2020 — 2022</div>
-              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Assistant of WMO Gynaecologist</h4>
+              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2022 — 2023</div>
+              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Receptionist</h4>
               <div class="text-[0.85rem] text-neutral-400">Rafique Welfare Hospital — Medical</div>
             </div>
           </div>
@@ -663,22 +321,22 @@ padding:16px;
 
             <div class="group relative overflow-hidden bg-card border border-line rounded-2xl px-[26px] py-6 mb-4 hover:border-red/45 hover:-translate-y-1 transition-all">
               <span class="absolute left-0 top-0 bottom-0 w-[3px] bg-red scale-y-0 origin-top group-hover:scale-y-100 transition-transform"></span>
-              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2024</div>
-              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Graphic Designing & Social Media Management</h4>
+              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2025-2026</div>
+              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">DAIAN</h4>
               <div class="text-[0.85rem] text-neutral-400">Professional Course</div>
             </div>
 
             <div class="group relative overflow-hidden bg-card border border-line rounded-2xl px-[26px] py-6 mb-4 hover:border-red/45 hover:-translate-y-1 transition-all">
               <span class="absolute left-0 top-0 bottom-0 w-[3px] bg-red scale-y-0 origin-top group-hover:scale-y-100 transition-transform"></span>
-              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2023</div>
-              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Office Management Course</h4>
+              <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2023-2024</div>
+              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">DMGAI | DCDAI | DSMM </h4>
               <div class="text-[0.85rem] text-neutral-400">Skill Orbit Solution Pvt. Ltd</div>
             </div>
 
             <div class="group relative overflow-hidden bg-card border border-line rounded-2xl px-[26px] py-6 mb-4 hover:border-red/45 hover:-translate-y-1 transition-all">
               <span class="absolute left-0 top-0 bottom-0 w-[3px] bg-red scale-y-0 origin-top group-hover:scale-y-100 transition-transform"></span>
               <div class="text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-redsoft">2021 — 2022</div>
-              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Intermediate in FA</h4>
+              <h4 class="text-[1.05rem] font-semibold mt-1.5 mb-0.5">Intermediate in FSC</h4>
               <div class="text-[0.85rem] text-neutral-400">Private — BISE Gujranwala</div>
             </div>
 
@@ -893,325 +551,227 @@ padding:16px;
           </p>
         </div>
 
-       <!-- ================= CONTACT LEFT SIDE ================= -->
+        <div class="grid md:grid-cols-2 gap-14 mt-12 items-start">
+          <div class="reveal grid gap-4">
+            <a class="flex gap-4 items-center bg-card border border-line rounded-2xl px-[22px] py-5 hover:border-red/50 hover:translate-x-1.5 transition-all" href="mailto:doctorsairayounas@gmail.com">
+              <div class="w-[46px] h-[46px] rounded-xl shrink-0 flex items-center justify-center bg-red/15 text-redsoft">✉</div>
+              <div>
+                <div class="text-[0.72rem] tracking-[0.16em] uppercase text-neutral-400">Email</div>
+                <div class="text-[0.94rem] font-medium">doctorsairayounas@gmail.com</div>
+              </div>
+            </a>
+            <a class="flex gap-4 items-center bg-card border border-line rounded-2xl px-[22px] py-5 hover:border-red/50 hover:translate-x-1.5 transition-all" href="tel:+923700702801">
+              <div class="w-[46px] h-[46px] rounded-xl shrink-0 flex items-center justify-center bg-red/15 text-redsoft">✆</div>
+              <div>
+                <div class="text-[0.72rem] tracking-[0.16em] uppercase text-neutral-400">Phone</div>
+                <div class="text-[0.94rem] font-medium">+92 370 0702801</div>
+              </div>
+            </a>
+            <div class="flex gap-4 items-center bg-card border border-line rounded-2xl px-[22px] py-5">
+              <div class="w-[46px] h-[46px] rounded-xl shrink-0 flex items-center justify-center bg-red/15 text-redsoft">⚲</div>
+              <div>
+                <div class="text-[0.72rem] tracking-[0.16em] uppercase text-neutral-400">Location</div>
+                <div class="text-[0.94rem] font-medium">Shaheenabad, Gujranwala, Pakistan</div>
+              </div>
+              
+             
+            </div>
+          </div>
+          <!-- WhatsApp CTA -->
+<div class="reveal mt-10">
 
-<div class="reveal space-y-5">
+  <div class="relative overflow-hidden rounded-[32px] border border-[#4b1d1d] bg-[#181818] px-6 py-14 md:px-12 md:py-20">
 
-    <!-- EMAIL CARD -->
-    <a href="mailto:hafizkhateeeb@gmail.com"
-       class="contact-card group flex items-center gap-5 rounded-2xl p-5">
+    <!-- Glow -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(127,29,29,0.15),transparent_70%)]"></div>
 
-        <div class="contact-icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round"
-                 stroke-linejoin="round">
-                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
-                <rect x="2" y="4" width="20" height="16" rx="2"/>
-            </svg>
-        </div>
+    <div class="relative z-10 text-center">
 
-        <div>
-            <p class="text-xs uppercase tracking-[3px] text-gray-500 font-mono">
-                Email
-            </p>
+      <h3 class="font-sora text-4xl md:text-5xl font-bold text-white mb-5">
+        Prefer WhatsApp?
+      </h3>
 
-            <h3 class="mt-1 text-lg font-semibold text-gray-900">
-                hafizkhateeeb@gmail.com
-            </h3>
-        </div>
+      <p class="font-inter text-lg md:text-xl text-gray-400 mb-10">
+        Message us directly for the fastest reply.
+      </p>
 
-    </a>
+      <a
+        href="https://wa.me/923001234567"
+        target="_blank"
+        class="group inline-flex items-center gap-4 rounded-full px-10 py-5 font-sora font-semibold text-lg text-white bg-gradient-to-r from-[#7f1d1d] via-[#991b1b] to-[#450a0a] transition-all duration-500 hover:scale-105 hover:shadow-[0_0_35px_rgba(185,28,28,.55)]"
+      >
 
-    <!-- PHONE CARD -->
+        <!-- WhatsApp Icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-8 h-8"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .1 5.36.1 11.96c0 2.1.55 4.15 1.59 5.96L0 24l6.25-1.64a11.92 11.92 0 0 0 5.81 1.49h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.19-1.24-6.18-3.51-8.41ZM12.07 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.83 9.83 0 1 1 8.31 4.6Zm5.39-7.34c-.29-.14-1.71-.84-1.98-.94-.26-.1-.46-.14-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.08-.29-.14-1.22-.45-2.32-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.5.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.65-1.57-.89-2.15-.23-.55-.47-.48-.65-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.99 2.43 0 1.43 1.03 2.81 1.17 3 .14.19 2.03 3.11 4.92 4.36.69.3 1.22.48 1.64.61.69.22 1.32.19 1.81.12.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.25.17-1.37-.07-.12-.26-.19-.55-.33Z"/>
+        </svg>
 
-    <a href="tel:+923396066102"
-       class="contact-card group flex items-center gap-5 rounded-2xl p-5">
+        Chat on WhatsApp
 
-        <div class="contact-icon">
+        <span class="transition-transform duration-300 group-hover:translate-x-2">
+          →
+        </span>
 
-            <svg width="22" height="22"
-                 fill="none"
-                 stroke="currentColor"
-                 stroke-width="2"
-                 stroke-linecap="round"
-                 stroke-linejoin="round">
-
-                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
-
-            </svg>
-
-        </div>
-
-        <div>
-
-            <p class="text-xs uppercase tracking-[3px] text-gray-500 font-mono">
-                Phone
-            </p>
-
-            <h3 class="mt-1 text-lg font-semibold text-gray-900">
-                +92 339 6066102
-            </h3>
-
-        </div>
-
-    </a>
-
-    <!-- LOCATION -->
-
-    <a href="#"
-       class="contact-card group flex items-center gap-5 rounded-2xl p-5">
-
-        <div class="contact-icon">
-
-            <svg width="22"
-                 height="22"
-                 fill="none"
-                 stroke="currentColor"
-                 stroke-width="2"
-                 stroke-linecap="round"
-                 stroke-linejoin="round">
-
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
-
-                <circle cx="12"
-                        cy="10"
-                        r="3"/>
-
-            </svg>
-
-        </div>
-
-        <div>
-
-            <p class="text-xs uppercase tracking-[3px] text-gray-500 font-mono">
-                Location
-            </p>
-
-            <h3 class="mt-1 text-lg font-semibold text-gray-900">
-                Shahenabad, Gujranwala
-            </h3>
-
-        </div>
-
-    </a>
-
-    <!-- WHATSAPP CARD -->
-
-    <div class="contact-card rounded-3xl p-10 text-center">
-
-        <h2 class="text-3xl font-bold text-gray-900">
-            Prefer WhatsApp?
-        </h2>
-
-        <p class="mt-3 text-gray-600">
-            Message us directly for the fastest response.
-        </p>
-
-        <a href="https://wa.me/923001234567"
-
-           class="mt-8 inline-flex items-center gap-3 rounded-full bg-green-600 px-8 py-4 font-semibold text-white transition duration-300 hover:bg-green-700">
-
-            <svg class="w-5 h-5"
-                 fill="currentColor"
-                 viewBox="0 0 24 24">
-
-                <path d="M20.52 3.48A11.9 11.9 0 0012.04 0C5.5 0 .17 5.33.17 11.87c0 2.09.55 4.13 1.6 5.93L0 24l6.36-1.67a11.86 11.86 0 005.68 1.45h.01c6.54 0 11.87-5.33 11.87-11.87"/>
-
-            </svg>
-
-            Chat on WhatsApp
-
-        </a>
+      </a>
 
     </div>
 
-    <!-- SOCIAL ICONS -->
-
-    <div class="flex gap-4 pt-3">
-
-        <a href="#" class="social-icon">
-            <i class="fab fa-email"></i>
-        </a>
-
-        <a href="#" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="#" class="social-icon">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="#" class="social-icon">
-            <i class="fab fa-github"></i>
-        </a>
-
-    </div>
+  </div>
 
 </div>
-     <!-- ================= CONTACT FORM ================= -->
 
-<div class="reveal" style="transition-delay:140ms">
+          <div class="reveal d1">
 
-    <form
-        class="contact-form space-y-5 rounded-3xl p-8 md:p-10"
-        onsubmit="event.preventDefault(); alert('Thanks for your message!');">
+  <form class="space-y-6 rounded-[28px] border border-red/25 bg-[#181818] p-8 md:p-10 shadow-[0_0_40px_rgba(120,0,0,.15)]">
 
-        <!-- Heading -->
+    <!-- Row 1 -->
+    <div class="grid md:grid-cols-2 gap-6">
 
-        <div class="mb-2">
+      <div>
+        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
+          Your Name
+        </label>
 
-            <h2 class="text-3xl font-bold text-gray-900">
-                Let's Build Something Amazing
-            </h2>
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+        >
+      </div>
 
-            <p class="mt-2 text-gray-600">
-                Fill out the form below and I'll get back to you within 24 hours.
-            </p>
+      <div>
+        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
+          Phone Number
+        </label>
 
-        </div>
+        <input
+          type="text"
+          placeholder="+92 300 1234567"
+          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+        >
+      </div>
 
-        <!-- Name & Email -->
-
-        <div class="grid gap-5 md:grid-cols-2">
-
-            <div>
-
-                <label class="mb-2 block font-mono text-xs uppercase tracking-widest text-gray-600">
-                    Full Name
-                </label>
-
-                <input
-                    type="text"
-                    placeholder="John Smith"
-                    required
-                    class="contact-input w-full rounded-xl px-5 py-4">
-
-            </div>
-
-            <div>
-
-                <label class="mb-2 block font-mono text-xs uppercase tracking-widest text-gray-600">
-                    Email Address
-                </label>
-
-                <input
-                    type="email"
-                    placeholder="john@email.com"
-                    required
-                    class="contact-input w-full rounded-xl px-5 py-4">
-
-            </div>
-
-        </div>
-
-        <!-- WhatsApp -->
-
-        <div>
-
-            <label class="mb-2 block font-mono text-xs uppercase tracking-widest text-gray-600">
-                WhatsApp Number
-            </label>
-
-            <input
-                type="tel"
-                placeholder="+92 300 1234567"
-                required
-                class="contact-input w-full rounded-xl px-5 py-4">
-
-        </div>
-
-        <!-- Select -->
-
-        <div class="grid gap-5 md:grid-cols-2">
-
-            <div>
-
-                <label class="mb-2 block font-mono text-xs uppercase tracking-widest text-gray-600">
-                    Service Needed
-                </label>
-
-                <select
-                    required
-                    class="contact-input w-full rounded-xl px-5 py-4">
-
-                    <option value="">Select Service</option>
-                    <option>AI Agent Development</option>
-                    <option>Website Development</option>
-                    <option>Mobile App</option>
-                    <option>UI/UX Design</option>
-                    <option>SEO</option>
-                    <option>Cyber Security</option>
-
-                </select>
-
-            </div>
-
-            <div>
-
-                <label class="mb-2 block font-mono text-xs uppercase tracking-widest text-gray-600">
-                    Budget
-                </label>
-
-                <select
-                    required
-                    class="contact-input w-full rounded-xl px-5 py-4">
-
-                    <option value="">Choose Budget</option>
-                    <option>Under $1,000</option>
-                    <option>$1,000 - $5,000</option>
-                    <option>$5,000 - $10,000</option>
-                    <option>$10,000+</option>
-
-                </select>
-
-            </div>
-
-        </div>
-
-        <!-- Message -->
-
-        <div>
-
-            <label class="mb-2 block font-mono text-xs uppercase tracking-widest text-gray-600">
-                Project Details
-            </label>
-
-            <textarea
-                rows="6"
-                required
-                placeholder="Tell me about your project..."
-                class="contact-input w-full resize-none rounded-xl px-5 py-4"></textarea>
-
-        </div>
-
-        <!-- Button -->
-
-        <button
-            type="submit"
-            class="contact-btn group flex w-full items-center justify-center gap-3 rounded-xl px-8 py-4 font-semibold">
-
-            <span>Send Message</span>
-
-            <svg
-                class="transition duration-300 group-hover:translate-x-2"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2">
-
-                <path d="M5 12h14"/>
-                <path d="m12 5 7 7-7 7"/>
-
-            </svg>
-
-        </button>
-
-    </form>
-
-</div>   
+    </div>
 
 
+
+    <!-- Row 2 -->
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div>
+        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
+          Email
+        </label>
+
+        <input
+          type="email"
+          placeholder="you@example.com"
+          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+        >
+      </div>
+
+      <div>
+        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
+          Subject
+        </label>
+
+        <input
+          type="text"
+          placeholder="Subject"
+          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-white placeholder:text-gray-500 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+        >
+      </div>
+
+    </div>
+
+
+
+    <!-- Row 3 -->
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div>
+
+        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
+          Service Needed
+        </label>
+
+        <select
+          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-gray-300 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+        >
+          <option>Select a Service</option>
+          <option>Web Development</option>
+          <option>UI/UX Design</option>
+          <option>AI Solutions</option>
+          <option>Portfolio Website</option>
+        </select>
+
+      </div>
+
+
+
+      <div>
+
+        <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
+          Project Budget
+        </label>
+
+        <select
+          class="w-full h-[62px] rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 text-gray-300 font-inter outline-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+        >
+          <option>Select a Range</option>
+          <option>$100 - $500</option>
+          <option>$500 - $1000</option>
+          <option>$1000 - $3000</option>
+          <option>$3000+</option>
+        </select>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Message -->
+
+    <div>
+
+      <label class="block mb-3 text-[13px] tracking-[3px] uppercase text-gray-400 font-sora">
+        Message
+      </label>
+
+      <textarea
+        rows="6"
+        placeholder="Tell me about your project..."
+        class="w-full rounded-2xl bg-[#0d0d0d] border border-[#3b1a1a] px-6 py-5 text-white placeholder:text-gray-500 font-inter outline-none resize-none transition-all duration-300 focus:border-[#b91c1c] focus:shadow-[0_0_20px_rgba(185,28,28,.35)]"
+      ></textarea>
+
+    </div>
+
+
+
+    <!-- Button -->
+
+    <button
+      onclick="sendMail()"
+      type="button"
+      class="group w-full h-[68px] rounded-2xl bg-gradient-to-r from-[#7f1d1d] via-[#991b1b] to-[#450a0a] text-white font-sora text-lg font-semibold transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(185,28,28,.55)]"
+    >
+      Appointment Now
+      <span class="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-2">
+        →
+      </span>
+    </button>
+
+  </form>
+
+</div>
         </div>
       </div>
     </section>
